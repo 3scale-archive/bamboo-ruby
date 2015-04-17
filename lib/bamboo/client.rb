@@ -27,7 +27,7 @@ module Bamboo
     end
 
     def get_service(id)
-      state.fetch('Services')[id]
+      state.fetch('Services', {})[id]
     end
 
     # @returns Array<Hash>

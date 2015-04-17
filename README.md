@@ -26,10 +26,10 @@ Or install it yourself as:
 require 'bamboo'
 
 client = Bamboo.new('your-bamboo-server.com')
-client.create_service(configuration)
-client.update_appp(id, configuration)
-client.find_app(id)
-client.delete_app(id)
+client.create_service(Acl: 'hdr(host) -i somename.com') 
+client.update_service(id, configuration)
+client.get_service(id)
+client.delete_service(id)
 ```
 
 ## Development
